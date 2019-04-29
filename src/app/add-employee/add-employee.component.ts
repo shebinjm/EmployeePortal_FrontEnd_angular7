@@ -23,7 +23,7 @@ export class AddEmployeeComponent implements OnInit {
   createEmployee(): void {
     this.httpClientService.createEmployee(this.user)
         .subscribe( data => {
-          alert("Employee created successfully.");
+      //    alert("Employee created successfully.");
         });
         this.router.navigateByUrl('/');
   };

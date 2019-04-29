@@ -25,10 +25,10 @@ export class HttpClientService {
   }
 
   public deleteEmployee(employee) {
-    return this.httpClient.delete<Employee>("http://localhost:8080/employee" + "/delete/"+ employee.empId);
+    return this.httpClient.delete("http://localhost:8080/employee" + "/delete/"+ employee.empId,{ responseType:'text'as 'json'});
   }
 
   public createEmployee(employee) {
-    return this.httpClient.post<Employee>("http://localhost:8080/employee/create", employee);
+    return this.httpClient.post<Employee>("http://localhost:8080/employee/create", employee,{ responseType:'text'as 'json'});
   }
 }
